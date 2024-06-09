@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Prediction</title>
+    <style>
+        body {
+            background-color: black;
+            color: pink;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            display: inline-block;
+            text-align: left;
+        }
+        input[type="text"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>House Rent Prediction</h1>
+        <form action="/predict" method="post">
+            <input type="text" name="house_area" placeholder="Enter house area" required="required" /> <br>
+            <button type="submit">Submit</button>
+        </form>
+        <h4 style="color: violet;">
+            {{ prediction_text }}
+        </h4>
+    </div>
+</body>
+</html>
+
